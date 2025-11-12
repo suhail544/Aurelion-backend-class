@@ -1,9 +1,9 @@
-const div = (a,b) => {
-    console.log(a/b)
-}
+const div = (a, b) => {
+  console.log(a / b);
+};
 
-const mul = (a,b) => {
-    console.log(a*b)
-}
+const mul = (a, b) => {
+  console.log(a * b);
+};
 
-module.exports = {div, mul}
+module.exports = { div, mul };
