@@ -81,7 +81,7 @@ app.delete("/students/:roll_no", async (req, res) => {
   // data from frontend
   const { roll_no } = req.params;
   // db logic
-  const db_data = await prisma.student.delete({
+  await prisma.student.delete({
     where: {
       roll_no: roll_no,
     },
