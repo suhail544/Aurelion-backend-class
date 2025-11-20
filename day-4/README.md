@@ -4,7 +4,7 @@
  Tasks completed 
 ## Tech Stack
 
-Node.js, express.js, prisma
+Node.js, express.js, prisma 
 
 
 ## Installation and Setup
