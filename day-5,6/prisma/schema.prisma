@@ -1,0 +1,53 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Blinkit {
+  product_id            String 
+  product_name          String
+  product_weight        String
+  product_offer         String
+  product_price         String
+  product_delivery_time String
+
+  category Category?
+  quantity Quantity[]
+
+  @@id([product_id, product_name])
+}
+
+// one to many
+model Quantity {
+  quantity_id String @id @default(cuid())
+  quantity    String
+
+  blinkit      Blinkit @relation(fields: [product_id, product_name], references: [product_id, product_name])
+  product_name String
+  product_id   String
+}
+
+// one to one
+model Category {
+  category_id String     @id @default(cuid())
+  category    Categories
+
+  blinkit      Blinkit @relation(fields: [product_id, product_name], references: [product_id, product_name])
+  product_name String
+  product_id   String
+
+  @@unique([product_id, product_name])
+}
+
+enum Categories {
+  vegetables
+  fruits
+  staples
+  snacks
+  beverages
+  household_essentials
+}

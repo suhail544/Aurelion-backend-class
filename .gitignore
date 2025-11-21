@@ -1,0 +1,54 @@
+# ───────────────────────────────
+# Node.js
+# ───────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ───────────────────────────────
+# Environment Variables
+# ───────────────────────────────
+.env
+.env.*     # if you use environment variants
+
+# ───────────────────────────────
+# Prisma
+# ───────────────────────────────
+# prisma/migrations/  # Uncomment this ONLY if you do NOT want to track migrations
+prisma/dev.db        # If using SQLite for dev
+prisma/generated/    # If you generate custom client code
+
+# Prisma engine files
+*.db-journal
+
+# ───────────────────────────────
+# Build Output (if you compile TS → JS)
+# ───────────────────────────────
+dist/
+build/
+
+# ───────────────────────────────
+# Logs
+# ───────────────────────────────
+logs/
+*.log
+logs/*.log
+debug.log
+*.pid
+*.seed
+
+# ───────────────────────────────
+# OS Files
+# ───────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ───────────────────────────────
+# Editor Files
+# ───────────────────────────────
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
